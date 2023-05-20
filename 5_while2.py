@@ -15,13 +15,26 @@
     
 """
 
-questions_and_answers = {}
+knowledge_base = {
+    'Как дела?': 'Хорошо!',
+    'Что делаешь?': 'Программирую',
+    'Как тебя зовут?': 'Меня зовут Алиса'
+}
 
-def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+def get_answer(question, knowledge_base):
+    if question in knowledge_base:
+        return knowledge_base[question]
+    else:
+        return 'Я не знаю ответ на этот вопрос'
+
+       
+
+while True:
+    user_question = input('Задайте свой вопрос: ')
+    answer = get_answer(user_question, knowledge_base)
+    print(answer)
+    if KeyboardInterrupt:
+        break
+
 if __name__ == "__main__":
-    ask_user(questions_and_answers)
+    get_answer()
