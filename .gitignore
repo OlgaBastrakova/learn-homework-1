@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 8_ephem_bot1 неготов.py
+xcvb.py
+mars.ephem.py
+example.py
 # C extensions
 *.so
 
